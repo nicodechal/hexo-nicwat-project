@@ -1,0 +1,48 @@
+<div class="container">
+  <h1 class="index-title">
+    <span style="font-size: 1.2em; display: inline-block;">
+      - Living Room - 
+    </span>
+  </h1>
+  <div class="article-list">
+    <div class="article-items">
+      <% page.posts.each(post => { %>
+
+        <div class="article">
+          <div class="date"># <%= post.date.format('YYYY-MM-DD') %></div>
+          <div class="title">
+            <a class="raw-link" href="<%- config.root %><%- post.path %>"><%= post.title %></a>
+          </div>
+          <small class="subtitle"><%- truncate(strip_html(post.content), {length: 120, omission: '...'}) %></small>
+        </div>
+
+      <% }) %>
+
+    </div>
+    <br />
+
+    <div class="pagination">
+      <% if (page.current == 1) { %>
+      <a class="raw-link forbid">
+      <%} else {%>
+      <a class="raw-link" href="<%- config.root %><%- page.prev_link %>">
+      <%}%>
+      <span class="page-btn prev">
+        <div class="top">Prev</div>
+        <div class="bottom">P. 8</div>
+      </span>
+      </a>
+      <% if (page.next_link == '') { %>
+      <a class="raw-link forbid">
+      <%} else {%>
+      <a class="raw-link" href="<%- config.root %><%- page.next_link %>">
+      <%}%>
+      <span class="page-btn next">
+        <div class="top">Next</div>
+        <div class="bottom">P. 10</div>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</div>

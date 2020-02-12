@@ -1,0 +1,138 @@
+p {
+  line-height: 1.75em;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 650px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.index-title {
+  text-align: center;
+  color: #333;
+  font-size: 35px;
+  margin: 70px 0 55px;
+  font-family: 'Lobster Two', cursive;
+}
+
+.article-list .article {
+  padding-bottom: 40px;
+  position: relative;
+  line-height: 1.75em;
+}
+
+.raw-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article .title {
+  margin: 5px 0;
+  font-size: 21px;
+  position: relative;
+  font-weight: bold;
+  /* border-left: 5px solid #999; */
+  /* padding-left: 10px; */
+}
+
+/* @media screen and (max-width: 650px) {
+  .article .title {
+    border-left: none;
+    padding-left: 0;
+  }
+} */
+
+.article .date {
+  font-family: "Ubuntu Condensed";
+  font-size: 18px;
+  color: #363636;
+  /* color: #607d8b; */
+}
+
+.article .subtitle {
+  color: #666;
+  font-size: 15px;
+}
+
+.pagination {
+  font-family: 'Ubuntu Condensed';
+  /* width: 400px; */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: 0;
+  /* position: fixed;
+  top: 30px;
+  right: 0; */
+}
+
+.pagination .current {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pagination .page-btn {
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #666;
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.page-btn * {
+  transition: all .3s;
+}
+
+.pagination .next:hover .top {
+  transform: translate(10px);
+}
+.pagination .prev:hover .top {
+  transform: translate(-10px);
+}
+
+.pagination .forbid,
+.pagination .forbid:hover {
+  color: gray;
+  cursor: not-allowed;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.pagination .forbid:hover .top {
+  transform: translate(0);
+}
+
+.pagination .prev {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.pagination .next {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: -1px;
+}
