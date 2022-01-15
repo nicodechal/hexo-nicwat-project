@@ -27,6 +27,6 @@
     "hexo-server": "^0.2.0",
     "hexo-toc": "^1.1.0",
     "markdown-it-katex": "^2.0.3",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.5"
   }
 }
